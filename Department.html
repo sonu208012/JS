@@ -1,0 +1,30 @@
+<html>
+<body>
+
+
+<h1 id="company"></h1>
+<p id="p1"></p>
+<br>
+ <p id="p2"></p>
+
+<script>
+//const COMPANY="<u>"+"ABC Enterprise Pvt. Limited"+"</u>";  
+
+class Department {
+    constructor(dept){
+        this.dept=dept;
+        
+    }
+
+
+    showDepartment()
+    {
+    return this.dept;
+    }
+}
+
+const emp = new Department("Engineering");
+document.getElementById("p1").innerHTML=emp.showDepartment();
+</script>
+</body>
+</html>

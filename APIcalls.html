@@ -1,0 +1,39 @@
+<html>
+    <head>
+
+        <title>
+            ISS API
+        </title>
+    </head>
+    <body>
+        <p id="para1"></p>
+        <p id="para2"></p>
+        <p id="para3"></p>
+        <p id="para4"></p>
+        <button onclick="getISS();">Where the ISS is?</button>
+
+
+        <script>
+          
+         const issapi_url="https://api.wheretheiss.at/v1/satellites/25544"
+
+         async function getISS(){
+          const response= await fetch(issapi_url);
+          const data=await response.json();
+
+      
+        // console.log(data);
+        //   const {lat, long}= data;
+        //   console.log(lat);
+        //   console.log(long);
+        document.getElementById("para1").textContent="Name  : "+data.name;
+         document.getElementById("para2").textContent="Latitude : "+data.latitude;
+          document.getElementById("para3").innerHTML="Longitude : "+data.longitude;
+          document.getElementById("para4").textContent="Visibility : "+data.visibility;
+         }   
+        </script>
+    </body>
+
+
+
+</html>

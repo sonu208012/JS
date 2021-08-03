@@ -1,0 +1,37 @@
+<html>
+<body>
+
+<h2>JavaScript Callback</h2>
+
+<p>Wait 3 seconds (3000 milliseconds) for this page to change.</p>
+
+<h3 id="h31"></h3>
+<h3 id="h32"></h3>
+<p id="p1"></p>
+<h3 id="h33"></h3>
+
+
+<button id="btn"> click here</button>
+<script>
+        
+setTimeout(myFunction, 3000);
+
+// fetch('https://www.google.com/').then(()=>{ 
+//         document.getElementById("h31").innerHTML = "Fetching done";
+//     });
+
+
+function myFunction() {
+     document.getElementById("p1").innerHTML = "Hello There!!";
+}
+
+
+
+document.getElementById("h32").innerHTML = "A greeting message will be printing soon";
+document.getElementById("h33").innerHTML = "closing program...";
+
+</script>
+
+
+</body>
+</html>

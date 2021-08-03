@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<h1 id="company"></h1>
+<p id="p1"></p>
+<br>
+ <p id="p2"></p>
+
+<script>
+var text="<ul>";
+      
+const COMPANY="<u>"+"ABC Enterprise Pvt. Limited"+"</u>";    
+var idnum=0;  //declared globally
+
+
+class Department {
+    constructor(dept){
+        this.dept=dept;
+        
+    }
+
+
+    getDepartment()
+    {
+      text=text+this.dept+"</li>";
+    }
+}
+
+//const emp = new Department("Engineering");
+
+
+class Employee extends Department{
+  static count=0;
+      constructor(fname, lname,dept) {
+        super(dept);
+        this.fname = fname;
+        this.lname = lname;
+        this.id = ++idnum;
+     //
+      } //closing constuctor 
+
+
+    static countEmployees(){
+     Employee.count++;
+      
+    }
+
+
+   getEmployeeDetails()
+    {
+    
+      
+      text=text+"<li>"+this.id +"  "+this.fullname +" in ";
+      return text;
+    }
+
+    getFullName()
+    {
+      let fullname= this.fname+" "+ this.lname;
+      this.fullname= fullname;
+      
+    }
+    
+} //closing employee class
+
+
+
+document.getElementById("company").innerHTML=COMPANY;
+
+const emp1 = new Employee("James", "Ford","Engineering");
+emp1.getFullName();
+emp1.getEmployeeDetails();
+emp1.getDepartment();
+Employee.countEmployees();
+
+
+const emp2 = new Employee("Alice", "Thompsan","Accounts");
+emp2.getFullName();
+emp2.getEmployeeDetails();
+emp2.getDepartment();
+Employee.countEmployees();
+
+const emp3 = new Employee("Joe", "Anderson","Business");
+emp3.getFullName();
+emp3.getEmployeeDetails();
+emp3.getDepartment();
+Employee.countEmployees();
+
+const emp4 = new Employee("Jill", "Bravo","Engineering");
+emp4.getFullName();
+emp4.getEmployeeDetails();
+emp4.getDepartment();
+Employee.countEmployees();
+
+const emp5 = new Employee("Bill", "Halvorsan","Accounts");
+emp5.getFullName();
+emp5.getEmployeeDetails();
+emp5.getDepartment();
+Employee.countEmployees();
+
+text=text+"</ul>";
+document.getElementById("p1").innerHTML = text;
+document.getElementById("p2").innerHTML = "Total number of employees working in this company are "+Employee.count;
+
+
+</script>
+
+</body>
+</html>

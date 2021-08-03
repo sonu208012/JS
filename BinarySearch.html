@@ -1,0 +1,20 @@
+<html>
+  <head>
+      <script src="BinarySearch.js">  </script>
+</head>
+
+<body>
+
+<p id= "para1"></p>
+<p id= "para2"></p>
+<script>
+let arr = [10, 33, 54, 70, 83];
+let data = 11
+    
+if (recursiveFunction(arr, data, 0, arr.length-1))
+    document.getElementById("para1").innerHTML=data+ "  found!!";
+else document.getElementById("para2").innerHTML= data+ " not found";
+</script>
+</body>
+
+                                    

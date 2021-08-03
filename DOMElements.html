@@ -1,0 +1,49 @@
+<HTML>
+    <head> <title>Append Elements using DOM API</title>
+        </head>
+    <body>
+        <h1>Append Elements using DOM API</h1>
+
+        <p id="para1"> </p>
+
+        <div id="div">
+           
+        </div>   
+
+        <script>
+            var txt="";
+
+            var myDiv=document.getElementById("div");
+
+            var para= document.createElement("p");
+
+            var node=document.createTextNode("A new paragraph");
+
+            para.append(node);
+
+            var strong= document.createElement("strong");
+            node=document.createTextNode("A Strong Text");
+  
+            strong.appendChild(node); 
+
+
+            myDiv.append(para,strong,"This is a text using append()");
+
+
+
+
+            /*
+            var children=myDiv.childNodes;
+            for (var i = 0; i < children.length; i++) {
+               txt = txt + i + ". "+children[i].nodeName + "<br>";
+            }
+
+            document.getElementById("para1").innerHTML = txt;
+            */
+        </script>
+
+
+
+
+    </body>
+</HTML>

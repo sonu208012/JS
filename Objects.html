@@ -1,0 +1,25 @@
+<html>
+    <head>
+      <title> Learning Objects in JavaScript</title>
+    </head>
+    <body> 
+        <p id="para1"> </p>
+        <p id="para2"> </p>
+    <script>
+      let person= 
+      {
+        fname:"John ",lname:"Smith",address:"101 some street",age:35, id:0,
+        fullName: function() { 
+                    person.id=2;
+                     return person.fname+ person.lname
+            
+                     //return this.fname+ this.lname
+                  } 
+      }
+     
+      document.getElementById("para1").innerHTML=person.id+'. '+person.fullName();
+      //document.getElementById("para2").innerHTML=person.id;
+
+</script>
+</body>
+</html>
